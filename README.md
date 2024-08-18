@@ -1,10 +1,26 @@
-# Getting Started with Create React App
+# Movie Library App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is a simple movie library app that allows users to search for movies and view details about them. The app uses the [The Open Movie Database (OMDb) API](https://www.omdbapi.com/) to fetch movie data.
+
+## Technical / Architectural Choices
+
+**Tanstack React Query**: I used Tanstack React Query to manage the API calls to the OMDb API. I have found it is lightweight and gives 99% of the functionality I need out of the box. It also has a lot of built-in features like caching, pagination, and polling that make it easy to work with.
+
+**Architecture**: My goal in building projects is to have the components and pages be structured in an intuitive way that mirrors the actual app itself. I have found that engineers navigate the codebase in the same way they navigate the app, so the closer they can match, the easier it is to find what you need in the codebase.
+
+**Styling**: I went very simple with styling and just used SASS and component level styling. If I was to do this project again, I would implement tailwind to make it go faster and keep more consistency in things like CSS variables.
+
+**Things I would change**: I would create an atom/molecule heirarchy in the components library to make it easier to reuse components and keep the main component library from getting too bloated.
+
+**Incomplete work**: I did not finish all of the requested functionality! I reached the upper time limit and since I was making every component from scratch, didn't have the time to complete all that was requested, but hopefully showcased my abilities and philosophies.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Installs all the dependencies required for the project to run. This command should be run before running the app for the first time.
 
 ### `npm start`
 
@@ -13,11 +29,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -39,8 +50,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
