@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pages {
+  display: flex;
+  background: var(--color-bg-secondary);
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin: 4px;
+  &.active,
+  &:hover {
+    background: var(--color-bg-tertiary);
+    color: var(--color-bg-primary);
+  }
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+}
+
+.summary {
+  font-size: 12px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.ellipse {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;600;800&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 html {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Inter', sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
 }
 
 h1,
@@ -10,7 +12,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Young Serif', serif;
+  font-family: 'Inter', serif;
 }
 
 body {
@@ -26,4 +28,9 @@ a {
 :root {
   --page-padding: 20px;
   --navbar-height: 80px;
+  --color-bg: #252528;
+  --color-bg-secondary: #3e3e40;
+  --color-bg-tertiary: #565659;
+  --color-text: #fff;
+  --color-text-secondary: #a3a3a5;
 }

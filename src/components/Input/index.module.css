@@ -1,0 +1,20 @@
+.input {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 0 16px 0 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: var(--color-text);
+  transition: all 0.1s;
+  background-image: url('https://img.icons8.com/ios/452/search--v1.png');
+  background-position: 16px 11px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  &:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 1);
+  }
+  &::placeholder {
+    color: var(--color-text-secondary);
+  }
+}

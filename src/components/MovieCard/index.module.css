@@ -1,0 +1,62 @@
+.card {
+  background: var(--color-bg-secondary);
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .title {
+    padding: 16px 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
+
+.skeleton {
+  background: var(--color-bg-secondary);
+  height: 420px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movieDetailsShade {
+  background: linear-gradient(0deg, #252528 0%, rgba(41, 41, 41, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  padding-top: 40vh;
+}
+
+.movieDetails {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.movieDetailsContent {
+  max-width: 66%;
+}
+
+.hero {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 88px;
+  color: #fafafa;
+}
+
+.subHero {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}

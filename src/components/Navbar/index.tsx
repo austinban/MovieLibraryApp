@@ -1,24 +1,30 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+
+import Input from '../Input'
+import Logo from '../Logo'
+import { useSearchContext } from '../../contexts/searchContext'
 
 import styles from './index.module.css'
 import classnames from 'classnames/bind'
 const cx = classnames.bind(styles)
 
-export default function Layout() {
+interface OwnProps {
+  hideNavBar?: boolean
+}
+
+export default function Layout({ hideNavBar = false }: OwnProps) {
+  const { updateSearchTerm, searchTerm } = useSearchContext()
+
   const menuItems = useMemo(
     () => [
       {
-        path: '/about',
-        title: 'About',
+        path: '/movies',
+        title: 'Movies',
       },
       {
-        path: '/profile',
-        title: 'Profiles',
-      },
-      {
-        path: '/contact',
-        title: 'Contact',
+        path: '/favorites',
+        title: 'Favorites',
       },
     ],
     [],
@@ -35,12 +41,19 @@ export default function Layout() {
     })
   }
 
+  if (hideNavBar) return null
+
   return (
     <div className={cx('wrapper')}>
       <div className={cx('logo')}>
-        <NavLink to={'/'}>Austin Ban</NavLink>
+        <NavLink to={'/'}>
+          <Logo />
+        </NavLink>
       </div>
-      <div className={cx('menu')}>{renderMenuItems()}</div>
+      <div className={cx('menu')}>
+        {renderMenuItems()}
+        <Input setValue={updateSearchTerm} value={searchTerm} />
+      </div>
     </div>
   )
 }
